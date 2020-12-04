@@ -12,7 +12,8 @@ import NotFound from './views/NotFound';
 import Projects from './views/Projects';
 import Resume from './views/Resume';
 import Stats from './views/Stats';
-
+import Mobile from './views/Mobile';
+import Embedded from './views/Embedded'
 // All of our CSS
 import './static/css/main.scss';
 
@@ -21,6 +22,8 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={Index} />
       <Route path="/about" component={About} />
+      <Route path="/mobile" component={Mobile} />
+      <Route path="/embedded" component={Embedded} />
       <Route path="/projects" component={Projects} />
       <Route path="/stats" component={Stats} />
       <Route path="/contact" component={Contact} />

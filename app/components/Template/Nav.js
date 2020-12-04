@@ -9,11 +9,11 @@ const Nav = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${BASE_PATH}/images/me_icon.jpg`} alt="" />
+        <img src={`${BASE_PATH}/images/OnceLabs.png`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
-        <p><a href="mailto:michael.l.dangelo@gmail.com">michael.l.dangelo@gmail.com</a></p>
+        <h2>onceLabs</h2>
+        <p><a href="mailto:support@onceLabs.com">support@onceLabs.com</a></p>
       </header>
     </section>
 
@@ -41,7 +41,7 @@ const Nav = () => (
           </li>
         ))}
       </ul>
-      <p className="copyright">&copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.</p>
+      <p className="copyright">&copy; onceLabs <Link to="/">www.onceLabs.com</Link>.</p>
     </section>
   </section>
 );

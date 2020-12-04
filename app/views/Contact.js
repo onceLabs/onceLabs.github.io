@@ -96,7 +96,7 @@ const Contact = () => {
           >
             <a href={validateText(message) ? `mailto:${message}@mldangelo.com` : ''}>
               <span>{message}</span>
-              <span>@mldangelo.com</span>
+              <span>@onceLabs.com</span>
             </a>
           </div>
         </div>

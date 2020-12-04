@@ -1,24 +1,28 @@
 const data = [
   {
     path: '/',
-    label: 'Michael D\'Angelo',
+    label: 'onceLabs',
     index: true,
   },
   {
-    path: '/about',
-    label: 'About',
+    path: '/mobile',
+    label: 'Mobile',
   },
   {
-    path: '/resume',
-    label: 'Resume',
+    path: '/embedded',
+    label: 'Embedded',
+  },
+  {
+    path: '/contact',
+    label: 'Hardware',
   },
   {
     path: '/projects',
     label: 'Projects',
-  },
+  },  
   {
-    path: '/stats',
-    label: 'Stats',
+    path: '/about',
+    label: 'About Us',
   },
   {
     path: '/contact',

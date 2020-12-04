@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 
-const Index = () => (
+const Embedded = () => (
   <Main>
     <article className="post" id="index">
       <header>
         <div className="title">
-          <h2><Link to="/">Bluetooth Low Energy Experts for Mobile and Embedded</Link></h2>
+          <h2><Link to="/">Mobile Application Developement</Link></h2>
           <p>onceLabs focuses on building quality user experiences between 
             people and wireless products via mobile and embedded software development. 
             We are Bluetooth Low Energy experts with a passion for uniting mobile devices and 
@@ -54,4 +54,4 @@ const Index = () => (
   </Main>
 );
 
-export default Index;
+export default Embedded;

@@ -7,13 +7,13 @@ const randomString = (length) => {
 const pages = [
   {
     route: '/',
-    title: 'Michael D\'Angelo',
+    title: 'onceLabs',
     heading: 'ABOUT THIS SITE',
   },
   {
     route: '/about',
-    title: 'About | Michael D\'Angelo',
-    heading: 'ABOUT ME',
+    title: 'About | onceLabs',
+    heading: 'ABOUT',
   },
   {
     route: '/projects',
