@@ -1,14 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 
 const Embedded = () => (
   <Main>
+    <Helmet title="Embedded" />
     <article className="post" id="index">
       <header>
         <div className="title">
-          <h2><Link to="/">Mobile Application Developement</Link></h2>
+          <h2><Link to="/">Firmware Developement</Link></h2>
           <p>onceLabs focuses on building quality user experiences between 
             people and wireless products via mobile and embedded software development. 
             We are Bluetooth Low Energy experts with a passion for uniting mobile devices and 

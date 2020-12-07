@@ -13,8 +13,8 @@ const data = [
     label: 'Embedded',
   },
   {
-    path: '/contact',
-    label: 'Hardware',
+    path: '/iot',
+    label: 'IoT',
   },
   {
     path: '/projects',
