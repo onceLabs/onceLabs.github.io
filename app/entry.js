@@ -15,9 +15,11 @@ import Stats from './views/Stats';
 import Mobile from './views/Mobile';
 import Embedded from './views/Embedded';
 import IoT from './views/IoT';
+import BLEHero from './views/BLEHero';
 
 // All of our CSS
 import './static/css/main.scss';
+
 
 ReactDOM.render(
   <Router basename={BASE_PATH}>
@@ -28,6 +30,7 @@ ReactDOM.render(
       <Route path="/embedded" component={Embedded} />
       <Route path="/iot" component={IoT} />
       <Route path="/projects" component={Projects} />
+      <Route path="/blehero" component={BLEHero} />
       <Route path="/stats" component={Stats} />
       <Route path="/contact" component={Contact} />
       <Route path="/resume" component={Resume} />

@@ -7,12 +7,12 @@
 /* Sidebar */
 
 	#sidebar {
-		margin-right: _size(section-spacing);
-		min-width: 22em;
-		width: 22em;
+		margin-right: _size(section-spacing)*2;
+		min-width: 14em;
+		width: 14em;
 
 		> * {
-			border-top: solid 1px _palette(border);
+			border-top: solid 1px _palette(ol-blue);
 			margin: _size(section-spacing) 0 0 0;
 			padding: _size(section-spacing) 0 0 0;
 		}
@@ -25,7 +25,7 @@
 
 		@include breakpoint(large) {
 			border-top: solid 1px _palette(border);
-			margin: _size(section-spacing) 0 0 0;
+			margin: _size(section-spacing) _size(section-spacing)*5 0 0;
 			min-width: 0;
 			padding: _size(section-spacing) 0 0 0;
 			width: 100%;

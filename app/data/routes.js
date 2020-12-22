@@ -21,6 +21,10 @@ const data = [
     label: 'Projects',
   },  
   {
+    path: '/blehero',
+    label: 'BLE Hero',
+  },  
+  {
     path: '/about',
     label: 'About Us',
   },

@@ -13,8 +13,8 @@
 	#header {
 		@include vendor('display', 'flex');
 		@include vendor('justify-content', 'space-between');
-		background-color: _palette(bg);
-		border-bottom: solid 1px _palette(border);
+		background-color: _palette(ol-gray);
+		border-bottom: solid 4px _palette(ol-blue);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -24,7 +24,7 @@
 		z-index: _misc(z-index-base);
 
 		a {
-			color: inherit;
+			color: _palette(bg);
 			text-decoration: none;
 		}
 
@@ -52,7 +52,7 @@
 
 		.links {
 			@include vendor('flex', '1');
-			border-left: solid 1px _palette(border);
+			border-left: solid 2px _palette(ol-blue);
 			height: inherit;
 			line-height: inherit;
 			margin-left: 1.5em;
@@ -61,7 +61,7 @@
 
 			ul {
 				li {
-					border-left: solid 1px _palette(border);
+					border-left: solid 2px _palette(ol-blue);
 					line-height: 1;
 					margin-left: 1em;
 					padding-left: 1em;

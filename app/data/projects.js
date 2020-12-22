@@ -3,7 +3,7 @@ const data = [
   {
     title: 'BLE Hero',
     subtitle: '2015 BVP Hackathon',
-    link: '/projects/nearestdollar/',
+    link: 'http://www.spacepotato.org',
     image: '/images/OnceLabs.jpg',
     date: '2015-11-20',
     desc: 'Built for a social impact hackathon. '
@@ -37,7 +37,7 @@ const data = [
     desc: 'Launched a potato battery powered weather balloon with two cameras '
       + 'and gps transponder. Resulting photos were published in a coffee table book. '
       + 'You can email me for a copy.',
-  }, {
+  },{
     title: 'Horner Fabric',
     subtitle: 'A convolutional neural network to classify cats! (and dogs)',
     link: '/project/catdetector/',

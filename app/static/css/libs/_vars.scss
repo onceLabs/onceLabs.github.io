@@ -22,7 +22,7 @@
 	$font: (
 		family:						('Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:				('Courier New', monospace),
-		family-heading:				('Raleway', Helvetica, sans-serif),
+		family-heading:				('HelveticaNeue-Light', monospace),
 		weight:						400,
 		weight-bold:				700,
 		weight-heading:				400,
@@ -33,13 +33,15 @@
 
 // Palette.
 	$palette: (
-		bg:							#ffffff,
+		bg:							#f4f4f4,//Body behind text
 		bg-alt:						#f4f4f4,
-		fg:							#646464,
+		fg:							#000000,//Main text
 		fg-bold:					#3c3b3b,
 		fg-light:					#aaaaaa,
-		border:						rgba(160,160,160,0.3),
+		ol-blue:					rgba(26, 154, 214, 0.99),//primary border
+		border:						rgba(160, 160, 160, 0.3),//primary border
 		border-bg:					rgba(160,160,160,0.075),
 		border-alt:					rgba(160,160,160,0.65),
-		accent:						#2e59ba
+		ol-gray:					#58595b,
+		accent:						#1a9ad6
 	);
