@@ -12,20 +12,20 @@ const Index = () => (
 
           <div className="horizontalImageContainer">
               <div className="symbol">
-                <img src={`${BASE_PATH}/images/cp-chip.png`} alt="" />
+                <img src={`${BASE_PATH}/images/chip-outline.png`} alt="" />
               </div>
               <div className="symbol">
-                <img src={`${BASE_PATH}/images/apple-logo.png`} alt="" />
+                <img src={`${BASE_PATH}/images/apple-outline.png`} alt="" />
               </div>
               <div className="symbol">
-                <img src={`${BASE_PATH}/images/android-logo.png`} alt="" />
+                <img src={`${BASE_PATH}/images/android-outline.png`} alt="" />
               </div>
               <div className="symbol">
-                <img src={`${BASE_PATH}/images/bluetooth-logo.png`} alt="" />
+                <img src={`${BASE_PATH}/images/bluetooth-outline.png`} alt="" />
               </div>
           </div>
 
-          <p style={{textAlign:"center"}}>
+          <p style={{textAlign:"left"}}>
             <br></br><br></br>
             onceLabs is focused on building quality user experiences between 
             people and wireless products via mobile and embedded software development. 
@@ -37,40 +37,59 @@ const Index = () => (
         </div>
       </header>
       <header>
+        <div className="row">
+          <div className="leftImage">
+            <img src={`${BASE_PATH}/images/mobile-dev-ble.svg`} alt="" />
+          </div>
+          <div className="rightText">
           <div className="title">
-          <h3><Link to="/">Mobile Development</Link></h3>
-          <br></br>
-          <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
-            Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
-            resources but not the expertise required to integrate BLE. In the latter case, we build robust 
-            APIs for iOS and Android tailored to your specific use case.</p>
-            <div className="illustration">
-              <img src={`${BASE_PATH}/images/mobile-dev-ble.svg`} alt="" />
-            </div>
+            <h3><Link to="/">Mobile Development</Link></h3>
+            <br></br>
+            <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
+                Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
+                resources but not the expertise required to integrate BLE. In the latter case, we build robust 
+                APIs for iOS and Android tailored to your specific use case.</p>
+          </div>
+          </div>
         </div>
       </header>
       <header>
-        <div className="title">
-          <h3><Link to="/">Embedded Development</Link></h3>
-          <p>One of our greatest strengths is our extensive background in developing connectivity applications 
+        <div className="row">
+          <div className="leftText">
+          <div className="title">
+            <h3><Link to="/">Embedded Development</Link></h3>
+            <br></br>
+            <p>One of our greatest strengths is our extensive background in developing connectivity applications 
             for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
             who focus on mobile exclusively.</p>
-            <div className="illustration">
-              <img src={`${BASE_PATH}/images/firmware.svg`} alt="" />
-            </div>
+          </div>
+          </div>
+          <div className="rightImage">
+            <img src={`${BASE_PATH}/images/firmware.svg`} alt="" />
+          </div>
         </div>
       </header>
       <header>
-        <div className="title">
-          <h3><Link to="/">Training</Link></h3>
-          <p>Our experts are available for on-site training to get your team up to speed on both mobile, 
-            and embedded development focused on Bluetooth Low Energy.</p>
-            <div className="illustration">
-              <img src={`${BASE_PATH}/images/teaching.svg`} alt="" />
-            </div>
+        <div className="row">
+          <div className="leftImage">
+            <img src={`${BASE_PATH}/images/teaching.svg`} alt="" />
+          </div>
+          <div className="rightText">
+          <div className="title">
+            <h3><Link to="/">Training</Link></h3>
+            <br></br>
+            <p>Our experts are available for on-site training to get your team up to speed on both mobile, 
+            and embedded development focused on Bluetooth Low Energy.
+            <br></br>
+            We have multiple training options available based on experience.
+            <br></br>
+            We have multiple training options available based on experience.
+            </p>
+          </div>
+          </div>
         </div>
       </header>
-      <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
+      <p> Welcome to our website. Please feel free to read more <Link to="/about">about us</Link>,
         or you can check out my {' '}
         <Link to="/resume">resume</Link>, {' '}
         <Link to="/projects">projects</Link>, {' '}

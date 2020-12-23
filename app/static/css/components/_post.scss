@@ -31,6 +31,10 @@
 					font-size: 1.5em;
 				}
 
+				p {
+					//text-transform: unset;
+				}
+
 				> :last-child {
 					margin-bottom: 0;
 				}
@@ -88,7 +92,7 @@
 			.illustrationRight {
 				border-bottom: 0;
 				display: block;
-				margin: (_size(element-margin) * 0.25) (_size(element-margin) * 0.25) 0 (_size(element-margin) * 0.25);
+				margin: (_size(element-margin) * 0.25) (_size(element-margin) * 0.25) (_size(element-margin) * 0.25) (_size(element-margin) * 0.25);
 				overflow: hidden;
 				position: relative;
 	
@@ -101,6 +105,62 @@
 				}
 			}
 
+			.leftImage {
+				float: left;
+				width: 35%;
+				padding: 5px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				img {
+					margin: auto;
+					width: 100%;
+					border-radius: 0%;
+					display: inline-block;
+				}
+			  }
+
+			  .rightImage {
+				float: right;
+				width: 35%;
+				padding: 0px;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				img {
+					margin: auto;
+					width: 100%;
+					border-radius: 0%;
+					display: inline-block;
+				}
+			  }
+
+			.leftText {
+				float: left;
+				width: 65%;
+				padding: 0px;
+			}
+
+			.rightText {
+				float: right;
+				width: 65%;
+				padding: 0px;
+			}
+
+			.column {
+				float: left;
+				width: 35%;
+				padding: 0px;
+			}
+			  
+			/* Clear floats after image containers */
+			.row::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+
+
 			.titleMain {
 				@include vendor('flex-grow', '1');
 				-ms-flex: 1;
@@ -109,10 +169,17 @@
 				h2 {
 					color: _palette(fg-bold);
 					text-align: left;
-					font-weight: _font(weight-heading);
-					font-size: 2.0em;
+					font-weight: _font(weight-semibold);
+					font-size: 2.7em;
 					font-family: _font(family-heading);
 					text-transform: unset;
+					letter-spacing: 0.0em;
+					line-height: 1.1em;
+				}
+
+				p {
+					//font-size: 1.0em;
+					//text-transform: unset;
 				}
 
 				> :last-child {

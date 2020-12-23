@@ -21,7 +21,7 @@ jobs:
       env:
         PORT: 3000
         NODE_ENV: production
-        BASE_PATH: /personal-site
+        BASE_PATH: /
         GA_ID: UA-68649021-1
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: | 
