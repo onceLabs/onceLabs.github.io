@@ -17,11 +17,12 @@ const LinkRenderer = ({ ...children }) => <Link {...children} />;
 const About = () => (
   <Main>
     <Helmet title="About" />
-    <article className="post" id="about">
+    <article className="postAlt" id="about">
       <header>
         <div className="title">
           <h2><Link to="/about">About Us</Link></h2>
           <p>(in about {count} words)</p>
+          
         </div>
       </header>
       <ReactMarkdown

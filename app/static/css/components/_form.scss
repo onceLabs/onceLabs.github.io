@@ -8,6 +8,7 @@
 
 	form {
 		margin: 0 0 _size(element-margin) 0;
+		//style={{flex: 1, flexDirection: "row", display: "flex"}}
 
 		&.search {
 			@include icon;
@@ -31,6 +32,7 @@
 			}
 		}
 	}
+
 
 	label {
 		color: _palette(fg-bold);

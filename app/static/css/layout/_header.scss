@@ -7,7 +7,7 @@
 /* Header */
 
 	body {
-		padding-top: 3.5em;
+		padding-top: 4.0em;
 	}
 
 	#header {
@@ -15,9 +15,9 @@
 		@include vendor('justify-content', 'space-between');
 		background-color: _palette(ol-gray);
 		border-bottom: solid 4px _palette(ol-blue);
-		height: 3.5em;
+		height: 4.0em;
 		left: 0;
-		line-height: 3.5em;
+		line-height: 4.0em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -145,8 +145,8 @@
 		}
 
 		@include breakpoint(small) {
-			height: 2.75em;
-			line-height: 2.75em;
+			height: 4em;
+			line-height: 4em;
 
 			h1 {
 				padding: 0 0 0 1em;

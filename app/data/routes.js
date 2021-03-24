@@ -5,29 +5,29 @@ const data = [
     index: true,
   },
   {
-    path: '/mobile',
-    label: 'Mobile',
+    path: '/',
+    label: 'Services',
   },
+  // {
+  //   path: '/mobile',
+  //   label: 'Mobile',
+  // },
+  // {
+  //   path: '/embedded',
+  //   label: 'Embedded',
+  // },
   {
-    path: '/embedded',
-    label: 'Embedded',
-  },
-  {
-    path: '/iot',
-    label: 'IoT',
-  },
-  {
-    path: '/projects',
-    label: 'Projects',
+    path: '/portfolio',
+    label: 'Portfolio',
   },  
   {
     path: '/blehero',
     label: 'BLE Hero',
   },  
-  {
-    path: '/about',
-    label: 'About Us',
-  },
+  // {
+  //   path: '/about',
+  //   label: 'About',
+  // },
   {
     path: '/contact',
     label: 'Contact',

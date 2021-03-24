@@ -2,10 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import Main from '../layouts/Main';
-
 import data from '../data/contact';
+import ContactLayout from '../layouts/ContactLayout';
 
 // Validates the first half of an email address.
 const validateText = (text) => {
@@ -78,16 +76,48 @@ const Contact = () => {
   }, isActive ? delay : null);
 
   return (
-    <Main>
+    <ContactLayout>
       <Helmet title="Contact" />
-      <article className="post" id="contact">
+      <article className="postAlt" id="contact">
         <header>
-          <div className="title">
+          <div className="title" style={{paddingTop: "5em"}}>
             <h2><Link to="/contact">Contact</Link></h2>
           </div>
         </header>
+        <form>
+          <div style={{display: "flex", flexDirection: "row", width: "100%", paddingBottom: "2em"}}>
+            <div style={{display: "flex", flexDirection: "column", width: "100%", paddingRight: "2em"}}>
+              <div id="nameContainer">
+                <label>Name</label>
+                <input type="text"></input>
+                <label>required</label>
+              </div>
+              <div id="companyContainer" style={{paddingTop: "2em"}}>
+                <label>Company</label>
+                <input type="text"></input>
+              </div>
+            </div>
+            <div style={{display:"flex", flexDirection: "column", width: "100%"}}>
+              <div id="emailContainer">
+                <label>Email</label>
+                <input type="email"></input>
+                <label>required</label>
+              </div>
+            </div>
+          </div>
+          <div style={{width: "100%"}}>
+              <div id="messageContainer" style={{paddingTop: "0.5em"}}>
+                <label>Message</label>
+                <textarea></textarea>
+                <label>required</label>
+              </div>
+            </div>
+        </form>
+        <div style={{width: "100%"}}>
+          <Link to="/" className="button-one">SUBMIT</Link>
+        </div>
         <div className="email-at">
-          <p>Feel free to get in touch. You can email me at: </p>
+          <p>Feel free to get in touch. You can email us at: </p>
           <div
             className="inline-container"
             style={validateText(message) ? {} : { color: 'red' }}
@@ -110,7 +140,7 @@ const Contact = () => {
           ))}
         </ul>
       </article>
-    </Main>
+    </ContactLayout>
   );
 };
 

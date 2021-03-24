@@ -9,13 +9,11 @@ import About from './views/About';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import NotFound from './views/NotFound';
-import Projects from './views/Projects';
-import Resume from './views/Resume';
-import Stats from './views/Stats';
+import Portfolio from './views/Portfolio';
 import Mobile from './views/Mobile';
 import Embedded from './views/Embedded';
-import IoT from './views/IoT';
 import BLEHero from './views/BLEHero';
+import Services from './views/Services';
 
 // All of our CSS
 import './static/css/main.scss';
@@ -28,12 +26,10 @@ ReactDOM.render(
       <Route path="/about" component={About} />
       <Route path="/mobile" component={Mobile} />
       <Route path="/embedded" component={Embedded} />
-      <Route path="/iot" component={IoT} />
-      <Route path="/projects" component={Projects} />
+      <Route path="/portfolio" component={Portfolio} />
       <Route path="/blehero" component={BLEHero} />
-      <Route path="/stats" component={Stats} />
       <Route path="/contact" component={Contact} />
-      <Route path="/resume" component={Resume} />
+      <Route path="/services" component={Services} />
       {/* Only useful in development mode */}
       <Route component={NotFound} status={404} />
     </Switch>

@@ -1,37 +1,79 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-
-import Main from '../layouts/Main';
+import MobileLayout from '../layouts/MobileLayout';
 
 const Mobile = () => (
-  <Main>
+  <MobileLayout>
     <Helmet title="Mobile" />
-    <article className="post" id="index">
+    <article className="service-post" id="index">
+      <header>
+        <div className="titleMain">
+          <h2><Link to="/">Mobile Apps that connect people with products!</Link></h2>
+          <p>onceLabs specializes in building mobile apps that connect people with products over Bluetooth.
+          </p>
+        </div>
+      </header>
+      <div className="horizontalImage">
+        <img src={`${BASE_PATH}/images/app_robot.svg`} alt="" />
+      </div>
       <header>
         <div className="title">
-          <h2><Link to="/">Mobile Application Developement</Link></h2>
-          <p>onceLabs focuses on building quality user experiences between 
-            people and wireless products via mobile and embedded software development. 
-            We are Bluetooth Low Energy experts with a passion for uniting mobile devices and 
-            embedded products over wireless interfaces.</p>
-          <p>
-            We offer mobile, and embedded software development, software analysis and debugging, 
-            Bluetooth Low Energy training, and advisory services for Bluetooth Low Energy enabled products.</p>
+          <h2><Link to="/">Experience matters</Link></h2>
+          <p>When you hire a 3rd party to build your app, you should be confident in their ability to execute.  Mobile apps that use Bluetooth
+            require deep expertise on both the mobile and embedded side and the typical app development company won't be able to bring that to
+            the table. onceLabs can. 
+          </p>
+        </div>
+      </header>
+      <header>
+      <div className="horizontalImageContainer">
+        <div className="symbol">
+          <img src={`${BASE_PATH}/images/app_robot.svg`} alt="" />
+        </div>
+        <div className="symbol">
+          <img src={`${BASE_PATH}/images/app_robot.svg`} alt="" />
+        </div>
+      </div>
+      </header>
+      <header>
+        <div className="row">
+          <div className="leftImage">
+            <img src={`${BASE_PATH}/images/mobile-dev-ble.svg`} alt="" />
+          </div>
+          <div className="rightText">
+            <div className="title">
+              <h2><Link to="/mobile">Mobile App Development</Link></h2>
+              <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
+                Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
+                resources but not the expertise required to integrate BLE. In the latter case, we build robust 
+                APIs for iOS and Android tailored to your specific use case.</p>
+                <div className="listButton">
+                  <Link to="/contact" className="button-two">Get a Free Quote &#x21e8;</Link>
+                </div>
+            </div>
+          </div>
         </div>
       </header>
       <header>
         <div className="title">
-          <h3><Link to="/">Mobile Development</Link></h3>
-          <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
-            Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
-            resources but not the expertise required to integrate BLE. In the latter case, we build robust 
-            APIs for iOS and Android tailored to your specific use case.</p>
+          <h2><Link to="/">Building Great Products should be fun</Link></h2>
+          <p>One of our greatest strengths is our extensive background in developing connectivity applications 
+            for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
+            who focus on mobile exclusively.</p>
         </div>
       </header>
       <header>
         <div className="title">
-          <h3><Link to="/">Embedded Development</Link></h3>
+          <h3><Link to="/">Flutter Applications</Link></h3>
+          <p>One of our greatest strengths is our extensive background in developing connectivity applications 
+            for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
+            who focus on mobile exclusively.</p>
+        </div>
+      </header>
+      <header>
+        <div className="title">
+          <h3><Link to="/">Xamarin Applications</Link></h3>
           <p>One of our greatest strengths is our extensive background in developing connectivity applications 
             for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
             who focus on mobile exclusively.</p>
@@ -44,16 +86,8 @@ const Mobile = () => (
             and embedded development focused on Bluetooth Low Energy.</p>
         </div>
       </header>
-      <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
-        or you can check out my {' '}
-        <Link to="/resume">resume</Link>, {' '}
-        <Link to="/projects">projects</Link>, {' '}
-        view <Link to="/stats">site statistics</Link>, {' '}
-        or <Link to="/contact">contact</Link> me.
-      </p>
-      <p> Source available <a href="https://github.com/mldangelo/personal-site">here</a>.</p>
     </article>
-  </Main>
+  </MobileLayout>
 );
 
 export default Mobile;

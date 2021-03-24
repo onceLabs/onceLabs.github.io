@@ -4,9 +4,11 @@ import { Helmet } from 'react-helmet';
 
 import Analytics from '../components/Template/Analytics';
 import Header from '../components/Template/Header';
+import Footer from '../components/Template/Footer';
 import Nav from '../components/Template/Nav';
 import ScrollToTop from '../components/Template/ScrollToTop';
-
+import { urlencoded } from 'body-parser';
+//background-image: url('Image_Location'); background-size: cover; height:480px; padding-top:80px;">
 const Main = (props) => (
   <>
     <Analytics />
@@ -18,6 +20,9 @@ const Main = (props) => (
         {props.children}
       </div>
       {props.fullPage ? null : <Nav />}
+    </div>
+    <div>
+      <Footer />
     </div>
   </>
 );
