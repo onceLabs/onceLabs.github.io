@@ -37,18 +37,16 @@ const BLEHero = () => (
           <div className="rightText">
             <div className="title">
               <h2><Link to="/mobile">Advanced BLE Scanning</Link></h2>
-              <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
-                Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
-                resources but not the expertise required to integrate BLE. In the latter case, we build robust 
-                APIs for iOS and Android tailored to your specific use case.</p>
+
                 <ul className="no_bullet">
-                  <li className="check">Native iOS Apps</li>
-                  <li className="check">Native Android Apps</li>
-                  <li className="check">Xamarin iOS and Android</li>
-                  <li className="check">Flutter iOS and Android</li>
-                  <li className="check">React Native iOS and Android</li>
-                  <li className="check">User Experience (UX) Development</li>
-                  <li className="check">User Interface (UI) Development</li>
+                  <li className="check">Company IDs from Bluetooth SIG</li>
+                  <li className="check">Search by any values included in advertisement data</li>
+                  <li className="check">Real-time RSSI plot for each discovered peripheral</li>
+                  <li className="check">Real-time estimated advertisement interval</li>
+                  <li className="check">Full breakdown of all advertisement data</li>
+                  <li className="check">Favorites support</li>
+                  <li className="check">Permanently ignore devices</li>
+                  <li className="check">Locator mode</li>
                 </ul>
             </div>
           </div>
@@ -62,9 +60,7 @@ const BLEHero = () => (
           <div className="leftText">
             <div className="title">
               <h2><Link to="/">GATT Explorer</Link></h2>
-              <p>One of our greatest strengths is our extensive background in developing connectivity applications 
-              for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
-              who focus on mobile or embedded exclusively.</p>
+
               <ul className="no_bullet">
                 <li className="check">Bluetooth Low Energy</li>
                 <li className="check">Thread</li>
@@ -90,10 +86,7 @@ const BLEHero = () => (
           <div className="rightText">
             <div className="title">
               <h2><Link to="/mobile">Interact with Characteristics</Link></h2>
-              <p>We offer full mobile application development for Android and iOS. We also offer product-specific 
-                Bluetooth Low Energy API development and handoff if you already have in-house mobile development 
-                resources but not the expertise required to integrate BLE. In the latter case, we build robust 
-                APIs for iOS and Android tailored to your specific use case.</p>
+
                 <ul className="no_bullet">
                   <li className="check">Native iOS Apps</li>
                   <li className="check">Native Android Apps</li>
@@ -115,9 +108,7 @@ const BLEHero = () => (
           <div className="leftText">
             <div className="title">
               <h2><Link to="/">Advanced Logging</Link></h2>
-              <p>One of our greatest strengths is our extensive background in developing connectivity applications 
-              for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
-              who focus on mobile or embedded exclusively.</p>
+
               <ul className="no_bullet">
                 <li className="check">Bluetooth Low Energy</li>
                 <li className="check">Thread</li>

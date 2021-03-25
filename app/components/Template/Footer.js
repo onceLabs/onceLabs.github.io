@@ -23,23 +23,23 @@ function Footer() {
                 <NavItem className="item"
                     eventKey={2}
                     title="Item">
-                    <Link to="/mobile">Mobile</Link>
+                    <Link to="">Mobile</Link>
                 </NavItem>
                 <NavItem className="item"
                     eventKey={3}>
-                    <Link to="/embedded">Embedded</Link>
+                    <Link to="">Embedded</Link>
                 </NavItem>
                 <NavItem className="item"
                     eventKey={4}>
-                    <Link to="/portfolio">Our Work</Link>
+                    <Link to="">Our Work</Link>
                 </NavItem>
                 <NavItem className="item"
                     eventKey={5}>
-                    <Link to="/contact">BLE Hero</Link>
+                    <Link to="">BLE Hero</Link>
                 </NavItem>
                 <NavItem className="item"
                     eventKey={6}>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="">Contact</Link>
                 </NavItem>
                 </Nav>
             </div>
