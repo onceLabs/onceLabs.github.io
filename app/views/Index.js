@@ -89,7 +89,7 @@ const Index = () => {
           </div>
           <div className="leftText">
             <div className="title">
-              <h2><Link to="/">Embedded Development</Link></h2>
+              <h2><Link to="/embedded">Embedded Development</Link></h2>
               <p>One of our greatest strengths is our extensive background in developing connectivity applications 
               for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
               who focus on mobile or embedded exclusively.</p>

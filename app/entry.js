@@ -22,7 +22,7 @@ import './static/css/main.scss';
 ReactDOM.render(
   <Router basename={BASE_PATH}>
     <Switch>
-      <Route exact path="/" component={Index} />
+      <Route exact path="/"component={Index}/>
       <Route path="/about" component={About} />
       <Route path="/mobile" component={Mobile} />
       <Route path="/embedded" component={Embedded} />

@@ -11,7 +11,7 @@ const Services = () => (
     <article className="service-post" id="index">
       <header>
         <div className="titleMain">
-          <h2><Link to="/">Services</Link></h2>
+          <h2><Link to="/services">Services</Link></h2>
           <ul className="no_bullet">
             <li className="check">Looking to integrate Bluetooth Low Energy technology into your product?</li>
             <li className="check">Already have an app that you paid to develop but isn't working properly?</li>

@@ -5,7 +5,7 @@ const data = [
     index: true,
   },
   {
-    path: '/',
+    path: '/services',
     label: 'Services',
   },
   // {
