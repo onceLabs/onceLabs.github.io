@@ -5,7 +5,6 @@
   "scripts": {
     "start": "nodemon server/server.js --ignore app/ --ignore test/ --exec babel-node",
     "build": "rimraf ./build && webpack --config ./webpack/webpack.production.config.babel.js --progress --profile --colors",
-    "postbuild": "react-snap",
     "build-dev": "rimraf ./build && babel-node webpack-cli --config ./webpack/webpack.config.babel.js --progress --profile --colors",
     "lint": "eslint app server test webpack",
     "test": "mocha --exit --require @babel/register ./test/test.js",
