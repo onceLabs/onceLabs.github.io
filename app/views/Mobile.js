@@ -9,7 +9,7 @@ const Mobile = () => (
     <article className="service-post" id="index">
       <header>
         <div className="titleMain">
-          <h2><Link to="/">Mobile Apps that connect people with products!</Link></h2>
+          <h2>Mobile Apps that connect people with products!</h2>
           <p>onceLabs specializes in building mobile apps that connect people with products over Bluetooth.
           </p>
         </div>
@@ -19,7 +19,7 @@ const Mobile = () => (
       </div>
       <header>
         <div className="title">
-          <h2><Link to="/">Experience matters</Link></h2>
+          <h2>Experience matters</h2>
           <p>When you hire a 3rd party to build your app, you should be confident in their ability to execute.  Mobile apps that use Bluetooth
             require deep expertise on both the mobile and embedded side and the typical app development company won't be able to bring that to
             the table. onceLabs can. 
@@ -57,7 +57,7 @@ const Mobile = () => (
       </header>
       <header>
         <div className="title">
-          <h2><Link to="/">Building Great Products should be fun</Link></h2>
+          <h2>Building Great Products should be fun</h2>
           <p>One of our greatest strengths is our extensive background in developing connectivity applications 
             for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
             who focus on mobile exclusively.</p>
@@ -65,7 +65,7 @@ const Mobile = () => (
       </header>
       <header>
         <div className="title">
-          <h3><Link to="/">Flutter Applications</Link></h3>
+          <h3>Flutter Applications</h3>
           <p>One of our greatest strengths is our extensive background in developing connectivity applications 
             for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
             who focus on mobile exclusively.</p>
@@ -73,7 +73,7 @@ const Mobile = () => (
       </header>
       <header>
         <div className="title">
-          <h3><Link to="/">Xamarin Applications</Link></h3>
+          <h3>Xamarin Applications</h3>
           <p>One of our greatest strengths is our extensive background in developing connectivity applications 
             for both mobile and embedded platforms in parallel, which gives us better design insight than companies 
             who focus on mobile exclusively.</p>
@@ -81,7 +81,7 @@ const Mobile = () => (
       </header>
       <header>
         <div className="title">
-          <h3><Link to="/">Training</Link></h3>
+          <h3>Training</h3>
           <p>Our experts are available for on-site training to get your team up to speed on both mobile, 
             and embedded development focused on Bluetooth Low Energy.</p>
         </div>

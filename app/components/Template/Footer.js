@@ -31,7 +31,7 @@ function Footer() {
                 </NavItem>
                 <NavItem className="item"
                     eventKey={4}>
-                    <Link to="/portfolio">Our Work</Link>
+                    <Link to="/portfolio">Portfolio</Link>
                 </NavItem>
                 <NavItem className="item"
                     eventKey={5}>
