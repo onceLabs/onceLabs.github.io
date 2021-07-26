@@ -16,7 +16,7 @@ const MobileLayout = (props) => (
     <Analytics />
     <ScrollToTop />
     <Helmet titleTemplate="%s | onceLabs" defaultTitle="onceLabs" />
-    <LazyHero imageSrc={`${BASE_PATH}/images/oncelabs_banner.png`} opacity="0.5" minHeight="25vh">
+    <LazyHero imageSrc={`${BASE_PATH}/images/oncelabs_banner.png`} opacity="0" minHeight="25vh">
     </LazyHero>
     <div id="wrapper">
       <Header />

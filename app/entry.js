@@ -14,6 +14,7 @@ import Mobile from './views/Mobile';
 import Embedded from './views/Embedded';
 import BLEHero from './views/BLEHero';
 import Services from './views/Services';
+import Staff from './views/Staff'
 
 // All of our CSS
 import './static/css/main.scss';
@@ -23,7 +24,7 @@ ReactDOM.render(
   <Router basename={BASE_PATH}>
     <Switch>
       <Route exact path="/"component={Index}/>
-      <Route path="/about" component={About} />
+      <Route path="/about" component={Staff} />
       <Route path="/mobile" component={Mobile} />
       <Route path="/embedded" component={Embedded} />
       <Route path="/portfolio" component={Portfolio} />

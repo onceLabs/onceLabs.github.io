@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Template/Footer';
 //background-image: url('Image_Location'); background-size: cover; height:480px; padding-top:80px;">
 
-const EmbeddedLayout = (props) => (
+const AboutLayout = (props) => (
   <>
     <Analytics />
     <ScrollToTop />
@@ -23,6 +23,7 @@ const EmbeddedLayout = (props) => (
       <div id="main">
         {props.children}
       </div>
+      {props.fullPage ? null : <Nav />}
     </div>
     <div>
       <Footer />
@@ -30,7 +31,7 @@ const EmbeddedLayout = (props) => (
   </>
 );
 
-EmbeddedLayout.propTypes = {
+AboutLayout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -38,9 +39,9 @@ EmbeddedLayout.propTypes = {
   fullPage: PropTypes.bool,
 };
 
-EmbeddedLayout.defaultProps = {
+AboutLayout.defaultProps = {
   children: null,
   fullPage: false,
 };
 
-export default EmbeddedLayout;
+export default AboutLayout;
