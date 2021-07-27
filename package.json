@@ -1,80 +1,32 @@
 {
-<<<<<<< HEAD
-  "name": "home",
-  "version": "2.1.0",
-  "homepage": "https://onceLabs.github.io",
-  "scripts": {
-    "start": "nodemon server/server.js --ignore app/ --ignore test/ --exec babel-node",
-    "build": "rimraf ./build && webpack --config ./webpack/webpack.production.config.babel.js --progress --profile --colors",
-    "build-dev": "rimraf ./build && babel-node webpack-cli --config ./webpack/webpack.config.babel.js --progress --profile --colors",
-    "lint": "eslint app server test webpack",
-    "test": "mocha --exit --require @babel/register ./test/test.js",
-    "dev": "nodemon server/server.js --ignore app/ --ignore test/ --exec babel-node",
-    "predeploy": "npm run build && cp -r public/* build/",
-    "deploy": "gh-pages -d build"
-  },
+  "name": "oncelabs.github.io",
+  "version": "1.0.0",
+  "description": "onceLabs website revision",
+  "main": "server.js",
   "dependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/node": "^7.10.5",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-json-strings": "^7.10.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-syntax-import-meta": "^7.10.4",
-    "@babel/plugin-transform-async-to-generator": "^7.10.4",
-    "@babel/plugin-transform-react-inline-elements": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/register": "^7.11.5",
-    "@babel/runtime": "^7.11.2",
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/fontawesome-free-regular": "^5.0.13",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "css-loader": "^4.2.2",
-    "dayjs": "^1.8.35",
-    "dotenv": "^8.2.0",
-=======
-  "name": "oncelabs-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
     "cors": "^2.8.5",
->>>>>>> 635022018aca2d36177982212c219732fd54d18f
-    "express": "^4.17.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "nodemon": "^2.0.12"
   },
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server.js",
+    "start-dev": "nodemon --exec babel-node server.js --ignore client"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onceLabs/onceLabs.github.io.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onceLabs/onceLabs.github.io/issues"
+  },
+  "homepage": "https://github.com/onceLabs/onceLabs.github.io#readme"
 }
-
