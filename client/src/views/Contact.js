@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import data from '../data/contact';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import data from '../data/contact';
 import ContactLayout from '../layouts/ContactLayout';
 
 // Validates the first half of an email address.
