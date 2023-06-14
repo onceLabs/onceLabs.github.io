@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>FarpointeSDK| Documentation</title>
+    
+    <link rel="icon"       href="../../favicon.ico" />
+    <link rel="mask-icon"  href="../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">FarpointeSDK</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Framework</span>
+  <h1 class="title">FarpointeSDK</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      Easily interface with Farpointe Readers
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <div class='content'><h2 id='Overview'>Overview</h2><p>FarpointeSDK is used to manage the registration, activation, and deactivation of associated Access Cards with relevant Farpointe Reader devices. This library abstracts the complex concepts of NeonFiles, Synchronization, and other Legic-related processes into a simple interface.</p><p>Use the shared instance of <a href='../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a> for various actions:</p><ul><li><p><p>register the user’s device with the Legic Connect Server</p></p></li><li><p><p>register a <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a></p></p></li><li><p><p>activate a <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a></p></p></li><li><p><p>deactivate a <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a></p></p></li><li><p><p><strong>And More.</strong> See <a href='../../documentation/farpointesdk/farpointesdkproviding/index.html'><code>FarpointeSdkProviding</code></a></p></p></li></ul></div>
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Essentials</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../documentation/farpointesdk/quicksetup.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  Quick Setup
+                </a>
+              
+              <div class="abstract">
+                <div class="content">Quick setup guide for initial configuration, registering an access card, and access card activation.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../documentation/farpointesdk/readerdetection.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  Reader Detection
+                </a>
+              
+              <div class="abstract">
+                <div class="content">Allows the user’s device to scan for nearby <em>Readers</em></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointesdk/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>class</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeSdk</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Central point of this library. All configurations, functions, and properties are routed through the <a href='../../documentation/farpointesdk/farpointesdk/shared.html'><code>shared</code></a> instance of this class</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointesdkproviding/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>protocol</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeSdkProviding</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Providing protocol for <a href='../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Protocols</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/readerdetectordelegate/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>protocol</span><span class='decorator empty-token'> </span><span class='identifier'>ReaderDetectorDelegate</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Delegate for Reader Detection events</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Structures</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/beacon/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>struct</span><span class='decorator empty-token'> </span><span class='identifier'>Beacon</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">iBeacon associated with a nearby <em>Reader</em> during a <a href='../../documentation/farpointesdk/readerdetectordelegate/index.html'><code>ReaderDetectorDelegate</code></a> event</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointeaccesscard/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>struct</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeAccessCard</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Access Card used to unlock a nearby <strong>Reader</strong></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointeconfiguration/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>struct</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeConfiguration</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">LEGIC Connect ControlCenter configuration</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Enumerations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/activationtime/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>ActivationTime</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Timeout options when activating a <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/disablereaderconfiguration/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>DisableReaderConfiguration</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Possible configurations when disabling Reader Detection</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointeerror/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeError</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Errors generated from this SDK or the underlying Legic SDK</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointeerrorreason/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeErrorReason</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Reasons that the associated <a href='../../documentation/farpointesdk/farpointeerror/index.html'><code>FarpointeError</code></a> occurred</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

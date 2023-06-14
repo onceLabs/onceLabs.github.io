@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>Quick Setup| Documentation</title>
+    
+    <link rel="icon"       href="../../favicon.ico" />
+    <link rel="mask-icon"  href="../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="index.html" class="item">FarpointeSDK</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">Quick Setup</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Article</span>
+  <h1 class="title">Quick Setup</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      Quick setup guide for initial configuration, registering an access card, and access card activation.
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <div class='content'><h2 id='Setup'>Setup</h2><p>All interactions with the <a href='../../documentation/farpointesdk/index.html'><code>FarpointeSDK</code></a> are through the shared instance of <a href='../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a>. The <strong>initial configuration</strong> process is as follows:</p><ol><li><p><p>Provide your Legic Connect Server credentials. <code>FarpointeSdk.setup(configuration:)</code></p></p></li><li><p><p>Register the user’s device. <code>FarpointeSdk.registerDevice(email:)</code> or <code>FarpointeSdk.registerDevice(phoneNumber:)</code></p></p></li><li><p><p>Confirm device registration using the confirmation token sent to the user via SMS or email. <code>FarpointeSdk.confirmDeviceRegistration(confirmationToken:)</code></p></p></li><li><p><p><strong>All done. The device is now registered</strong> The library will now maintain a list of <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a>s registered to this device</p></p></li></ol><aside class='important'><p><p>Once a device is registered, it can be unregistered by calling <code>FarpointeSdk.unregisterDevice(:)</code> or by uninstalling the app. Once either case occurs, <strong>all</strong> <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a>s registered to this device will be deleted from local data. This data is not recoverable.</p></p></aside><p>After <strong>initial configuration</strong> is complete, all that is required for subsequent app launches is <em>1. Provide your Legic Connect Server credentials. <code>FarpointeSdk.setup(configuration:)</code></em></p><h2 id='Registering-an-Access-Card'>Registering an Access Card</h2><p>In order for a <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> to be activated, it must first be registered to the user’s device.</p><div data-syntax="swift" class="code-listing">
+  <div class="container-general">
+    <pre><code><span class="code-line-container"><span data-line-number="1" class="code-number" style="display: none;"></span><span class="code-line">let result = await FarpointeSdk.shared.registerAccessCard(registrationKey: someAccessCardKey)</span></span>
+<span class="code-line-container"><span data-line-number="2" class="code-number" style="display: none;"></span><span class="code-line">switch result {</span></span>
+<span class="code-line-container"><span data-line-number="3" class="code-number" style="display: none;"></span><span class="code-line">case .success(_):</span></span>
+<span class="code-line-container"><span data-line-number="4" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;Access Card successfully registered!&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="5" class="code-number" style="display: none;"></span><span class="code-line">case .failure(let error):</span></span>
+<span class="code-line-container"><span data-line-number="6" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;Oops. Something went wrong during registration. Heres the reason: \(error.description)&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="7" class="code-number" style="display: none;"></span><span class="code-line">}</span></span>
+</code></pre>
+  </div>
+</div>
+<h2 id='Accessing-Access-Cards'>Accessing Access Cards</h2><p>A @Published list of the device’s registered <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a>s is available for collection on the <em>accessCards</em> property of <a href='../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a></p><div data-syntax="swift" class="code-listing">
+  <div class="container-general">
+    <pre><code><span class="code-line-container"><span data-line-number="1" class="code-number" style="display: none;"></span><span class="code-line">let cancellable = FarpointeSdk.shared.accessCards.sink { [weak self] cards in</span></span>
+<span class="code-line-container"><span data-line-number="2" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;An access card was changed, added, or removed: \(cards)&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="3" class="code-number" style="display: none;"></span><span class="code-line">}</span></span>
+</code></pre>
+  </div>
+</div>
+<h2 id='Activating-an-Access-Card'>Activating an Access Card</h2><p>To unlock a nearby reader, a registered <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> can be activated for a certain amount of time until the reader acknowledges the interaction and responds with a result.</p><div data-syntax="swift" class="code-listing">
+  <div class="container-general">
+    <pre><code><span class="code-line-container"><span data-line-number="1" class="code-number" style="display: none;"></span><span class="code-line">let activationTime = ActivationTime.thirtySeconds</span></span>
+<span class="code-line-container"><span data-line-number="2" class="code-number" style="display: none;"></span><span class="code-line">let result = await FarpointeSdk.shared.activateAccessCard(registrationKey: someAccessCardKey, timeout: activationTime)</span></span>
+<span class="code-line-container"><span data-line-number="3" class="code-number" style="display: none;"></span><span class="code-line">switch result {</span></span>
+<span class="code-line-container"><span data-line-number="4" class="code-number" style="display: none;"></span><span class="code-line">case .success(_):</span></span>
+<span class="code-line-container"><span data-line-number="5" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;The reader unlocked!&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="6" class="code-number" style="display: none;"></span><span class="code-line">case .failure(let error):</span></span>
+<span class="code-line-container"><span data-line-number="7" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;Oops. Something went wrong during activation. Heres the reason: \(error.description)&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="8" class="code-number" style="display: none;"></span><span class="code-line">}</span></span>
+</code></pre>
+  </div>
+</div>
+<aside class='note'><p class='label'>Note</p><p><p>If no reader responds within the provided <a href='../../documentation/farpointesdk/activationtime/index.html'><code>ActivationTime</code></a>, the function will return with a timeout error, and the access card will be deactivated.</p></p></p></aside><p>A <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> can also be deactivated while it is activated.</p><div data-syntax="swift" class="code-listing">
+  <div class="container-general">
+    <pre><code><span class="code-line-container"><span data-line-number="1" class="code-number" style="display: none;"></span><span class="code-line">let result = FarpointeSdk.shared.deactivateAccessCard(registrationKey: someAccessCardKey)</span></span>
+<span class="code-line-container"><span data-line-number="2" class="code-number" style="display: none;"></span><span class="code-line">switch result {</span></span>
+<span class="code-line-container"><span data-line-number="3" class="code-number" style="display: none;"></span><span class="code-line">case .success(_):</span></span>
+<span class="code-line-container"><span data-line-number="4" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;Card successfully deactivated&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="5" class="code-number" style="display: none;"></span><span class="code-line">case .failure(let error):</span></span>
+<span class="code-line-container"><span data-line-number="6" class="code-number" style="display: none;"></span><span class="code-line">    print(&quot;Oops. Something went wrong during deactivation. Heres the reason: \(error.description)&quot;)</span></span>
+<span class="code-line-container"><span data-line-number="7" class="code-number" style="display: none;"></span><span class="code-line">}</span></span>
+</code></pre>
+  </div>
+</div>
+<aside class='note'><p class='label'>Note</p><p><p>Only one <a href='../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> can be activated at a time. An error will return otherwise.</p></p></p></aside></div>
+  </div>
+</div>
+
+  
+  
+  <section id='see-also' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>See Also</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Essentials</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../documentation/farpointesdk/readerdetection.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  Reader Detection
+                </a>
+              
+              <div class="abstract">
+                <div class="content">Allows the user’s device to scan for nearby <em>Readers</em></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointesdk/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>class</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeSdk</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Central point of this library. All configurations, functions, and properties are routed through the <a href='../../documentation/farpointesdk/farpointesdk/shared.html'><code>shared</code></a> instance of this class</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../documentation/farpointesdk/farpointesdkproviding/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>protocol</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeSdkProviding</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Providing protocol for <a href='../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

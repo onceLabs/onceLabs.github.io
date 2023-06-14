@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>FarpointeSdkProviding| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">FarpointeSDK</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">FarpointeSdkProviding</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Protocol</span>
+  <h1 class="title">FarpointeSdkProviding</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      Providing protocol for <a href='../../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a>
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>protocol</span> <span class='token-identifier'>FarpointeSdkProviding</span></code></pre>
+  </div>
+</section>
+<div class='content'><h2 id='overview'>Overview</h2><p>Create a test implementation with this protocol for Unit Tests</p></div>
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/accesscards.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>accessCards</span><span class='decorator'>: </span><span class='decorator'>Published</span><span class='decorator'>&lt;[</span><span class='decorator'>FarpointeAccessCard</span><span class='decorator'>]&gt;.</span><span class='decorator'>Publisher</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"><code>Published</code> list of <a href='../../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a>s currently registered to this device</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Methods</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/activateaccesscard(registrationkey:timeout:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>activateAccessCard</span><span class='decorator'>(</span><span class='decorator'>registrationKey</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>, </span><span class='decorator'>timeout</span><span class='decorator'>: </span><span class='decorator'>ActivationTime</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Activate a registered <a href='../../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> for a given time interval in order to unlock a nearby reader</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/confirmdeviceregistration(confirmationtoken:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>confirmDeviceRegistration</span><span class='decorator'>(</span><span class='decorator'>confirmationToken</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Confirm the registration process of the device to the LEGIC Connect Server</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/deactivateaccesscard(registrationkey:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>deactivateAccessCard</span><span class='decorator'>(</span><span class='decorator'>registrationKey</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Deactivate a registered <a href='../../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> that is currently activated</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/disablereaderdetection(config:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>disableReaderDetection</span><span class='decorator'>(</span><span class='decorator'>config</span><span class='decorator'>: </span><span class='decorator'>DisableReaderConfiguration</span><span class='decorator'>) -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Disable Reader Detection for either all <em>Readers</em> or a single <em>Reader</em> associated by its <code>UUID</code></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/enablereaderdetection(for:delegate:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>enableReaderDetection</span><span class='decorator'>(</span><span class='decorator'>for</span><span class='decorator'>: </span><span class='decorator'>UUID</span><span class='decorator'>, </span><span class='decorator'>delegate</span><span class='decorator'>: </span><span class='decorator'>ReaderDetectorDelegate</span><span class='decorator'>?) -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Enable Reader Detection for the given <em>Reader</em> <code>UUID</code></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/isdeviceregistered().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>isDeviceRegistered</span><span class='decorator'>() -&gt; </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Check if this device is successfully registered to the LEGIC Connect Server</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/registeraccesscard(registrationkey:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>registerAccessCard</span><span class='decorator'>(</span><span class='decorator'>registrationKey</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Register a new <a href='../../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> to this device</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/registerdevice(email:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>registerDevice</span><span class='decorator'>(</span><span class='decorator'>email</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Register this device using a valid email address to the LEGIC Connect Server</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/registerdevice(phonenumber:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>registerDevice</span><span class='decorator'>(</span><span class='decorator'>phoneNumber</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Register this device using a valid phone number to the LEGIC Connect Server</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/unregisteraccesscard(registrationkey:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>unregisterAccessCard</span><span class='decorator'>(</span><span class='decorator'>registrationKey</span><span class='decorator'>: </span><span class='decorator'>String</span><span class='decorator'>) </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Unregister an existing <a href='../../../documentation/farpointesdk/farpointeaccesscard/index.html'><code>FarpointeAccessCard</code></a> from this device that was previously registered</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/unregisterdevice().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>unregisterDevice</span><span class='decorator'>() </span><span class='decorator'>async</span><span class='decorator'> -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Unregister the current device from the back-end and delete all locally saved <a href='../../../documentation/farpointesdk/farpointesdkproviding/accesscards.html'><code>accessCards</code></a></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Type Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/shared.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>static</span><span class='decorator empty-token'> </span><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>shared</span><span class='decorator'>: </span><span class='decorator'>FarpointeSdkProviding</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Singleton instance of <a href='../../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a>.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Type Methods</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdkproviding/setup(configuration:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>static</span><span class='decorator empty-token'> </span><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>setup</span><span class='decorator'>(</span><span class='decorator'>configuration</span><span class='decorator'>: </span><span class='decorator'>FarpointeConfiguration</span><span class='decorator'>) -&gt; </span><span class='decorator'>Result</span><span class='decorator'>&lt;</span><span class='decorator'>Void</span><span class='decorator'>, </span><span class='decorator'>FarpointeError</span><span class='decorator'>&gt;</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Setup method of <a href='../../../documentation/farpointesdk/farpointesdk/index.html'><code>FarpointeSdk</code></a>. This function <em>must</em> be called before any methods are invoked from this class.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  <section id='see-also' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>See Also</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Essentials</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/farpointesdk/quicksetup.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  Quick Setup
+                </a>
+              
+              <div class="abstract">
+                <div class="content">Quick setup guide for initial configuration, registering an access card, and access card activation.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/farpointesdk/readerdetection.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  Reader Detection
+                </a>
+              
+              <div class="abstract">
+                <div class="content">Allows the user’s device to scan for nearby <em>Readers</em></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/farpointesdk/farpointesdk/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>class</span><span class='decorator empty-token'> </span><span class='identifier'>FarpointeSdk</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Central point of this library. All configurations, functions, and properties are routed through the <a href='../../../documentation/farpointesdk/farpointesdk/shared.html'><code>shared</code></a> instance of this class</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
